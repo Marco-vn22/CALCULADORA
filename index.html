@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f3edff">
+  <title>Calculadora científica</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="calculator" aria-label="Calculadora científica">
+    <header class="heading">
+      <span class="brand"><span class="brand-icon" aria-hidden="true">＝</span> Calculadora científica</span>
+      <div class="mode-row"><span class="status"><span></span> Un poco de color. Infinitas posibilidades.</span><button id="angle-mode" class="mode-button" aria-label="Modo angular: grados. Cambiar a radianes">DEG</button></div>
+    </header>
+    <section class="display" aria-label="Pantalla">
+      <p id="expression" class="expression">&nbsp;</p>
+      <output id="result" aria-live="polite" aria-atomic="true">0</output>
+    </section>
+    <div class="science-keys" aria-label="Funciones científicas">
+      <button data-insert="sin(">sin</button><button data-insert="cos(">cos</button><button data-insert="tan(">tan</button><button data-insert="^">xʸ</button>
+      <button data-insert="asin(" aria-label="Arcoseno">sin⁻¹</button><button data-insert="acos(" aria-label="Arcocoseno">cos⁻¹</button><button data-insert="atan(" aria-label="Arcotangente">tan⁻¹</button><button data-insert="^2" aria-label="Al cuadrado">x²</button>
+      <button data-insert="log(">log</button><button data-insert="ln(">ln</button><button data-insert="sqrt(" aria-label="Raíz cuadrada">√</button><button data-insert="!" aria-label="Factorial">n!</button>
+      <button data-insert="(" aria-label="Abrir paréntesis">(</button><button data-insert=")" aria-label="Cerrar paréntesis">)</button><button data-insert="π" aria-label="Pi">π</button><button data-insert="e" aria-label="Número e">e</button>
+    </div>
+    <div class="keys">
+      <button class="utility" data-action="clear" aria-label="Borrar todo">AC</button>
+      <button class="utility" data-action="sign" aria-label="Cambiar signo">+/−</button>
+      <button class="utility" data-insert="%" aria-label="Porcentaje">%</button>
+      <button class="operator" data-insert="/" aria-label="Dividir">÷</button>
+      <button data-insert="7">7</button><button data-insert="8">8</button><button data-insert="9">9</button><button class="operator" data-insert="*" aria-label="Multiplicar">×</button>
+      <button data-insert="4">4</button><button data-insert="5">5</button><button data-insert="6">6</button><button class="operator" data-insert="-" aria-label="Restar">−</button>
+      <button data-insert="1">1</button><button data-insert="2">2</button><button data-insert="3">3</button><button class="operator" data-insert="+" aria-label="Sumar">+</button>
+      <button data-action="backspace" aria-label="Borrar último carácter">⌫</button><button data-insert="0">0</button><button data-insert="." aria-label="Separador decimal">,</button><button class="equals" data-action="equals" aria-label="Calcular resultado">=</button>
+    </div>
+    <footer><kbd>Enter</kbd> calcular <span>·</span> <kbd>Esc</kbd> borrar <span>·</span> DEG: grados / RAD: radianes</footer>
+  </main>
+</body>
+</html>
